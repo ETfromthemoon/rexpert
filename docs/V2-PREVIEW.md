@@ -24,6 +24,7 @@ No competitor claims, metrics, logos, testimonials or copyrighted imagery were c
 - Composition: split evidence hero, dual audience panels, indexed role ledger and sequential search method.
 - Typography: modern humanist sans with technical labels.
 - Motion: cinematic scroll progress, hero depth, dossier parallax, drifting technical grid and staggered section reveals, with a complete reduced-motion mode.
+- Photography: editorial life-sciences and professional collaboration imagery from [Unsplash](https://unsplash.com), locally optimized and treated with restrained color, gradient overlays and deliberate crops.
 - Stack: Astro static output with minimal native JavaScript and no hydrated framework runtime.
 
 ## Content additions

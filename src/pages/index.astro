@@ -9,6 +9,7 @@ const steps = [
   { no:'04', title:'Present with context', body:'Every candidate arrives with a concise rationale: relevant evidence, likely strengths and points to explore.' }
 ];
 const schema = {'@context':'https://schema.org','@type':'EmploymentAgency',name:'Rexpert',url:'https://rexpert.com',description:'FDA-informed Regulatory Affairs recruiting for US drug development.',areaServed:'United States'};
+const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
 ---
 <Layout title="Rexpert — FDA-informed Regulatory Affairs recruiting" description="Permanent and contract Regulatory Affairs talent for US drug development, evaluated through an FDA-informed lens.">
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
@@ -40,19 +41,20 @@ const schema = {'@context':'https://schema.org','@type':'EmploymentAgency',name:
         </div>
       </div>
       <div class="hero-proof"><p>Focused on the functions that determine how medicines move forward.</p><div><span>Pharma</span><span>Biotech</span><span>CRO / CDMO</span><span>Regulatory consulting</span></div></div>
+      <figure class="hero-photo"><img data-hero-photo src={asset('images/lab-team.jpg')} width="1800" height="1050" alt="Microscopic view of cells used in life sciences research" loading="eager"/><figcaption><span>THE ENVIRONMENT</span> Where science, evidence and regulatory decisions meet.</figcaption></figure>
     </section>
 
     <section class="choice" id="employers">
       <p class="section-no">01 / CHOOSE YOUR PATH</p>
       <div class="choice-intro"><p class="overline">One specialist market. Two perspectives.</p><h2>Built for the people hiring—and the people doing the work.</h2></div>
       <div class="choice-panels">
-        <article class="employer-panel"><span class="panel-label">FOR EMPLOYERS</span><h3>Your program cannot afford a surface-level match.</h3><p>We translate a business need into a precise regulatory mandate, then search for professionals whose experience stands up to the work ahead.</p><ul><li>Permanent and retained search</li><li>Contract and interim talent</li><li>Single or multi-hire programs</li><li>Specialist through executive</li></ul><a href="#contact">Discuss a hiring need <span>↗</span></a></article>
-        <article class="candidate-panel" id="candidates"><span class="panel-label">FOR CANDIDATES</span><h3>Your experience deserves a more informed conversation.</h3><p>We look beyond your latest title to understand the products, submissions, decisions and agency interactions that define your value.</p><ul><li>Confidential career conversations</li><li>Permanent and contract opportunities</li><li>Role context before introduction</li><li>Direct, specialist feedback</li></ul><a href="mailto:hello@rexpert.com?subject=Candidate%20introduction">Introduce yourself <span>↗</span></a></article>
+        <article class="employer-panel"><figure><img src={asset('images/leadership-meeting.jpg')} width="1600" height="900" alt="Business leaders reviewing a hiring mandate together" loading="lazy"/></figure><span class="panel-label">FOR EMPLOYERS</span><h3>Your program cannot afford a surface-level match.</h3><p>We translate a business need into a precise regulatory mandate, then search for professionals whose experience stands up to the work ahead.</p><ul><li>Permanent and retained search</li><li>Contract and interim talent</li><li>Single or multi-hire programs</li><li>Specialist through executive</li></ul><a href="#contact">Discuss a hiring need <span>↗</span></a></article>
+        <article class="candidate-panel" id="candidates"><figure><img src={asset('images/candidate-team.jpg')} width="1800" height="1050" alt="A diverse professional team collaborating in a modern workplace" loading="lazy"/></figure><span class="panel-label">FOR CANDIDATES</span><h3>Your experience deserves a more informed conversation.</h3><p>We look beyond your latest title to understand the products, submissions, decisions and agency interactions that define your value.</p><ul><li>Confidential career conversations</li><li>Permanent and contract opportunities</li><li>Role context before introduction</li><li>Direct, specialist feedback</li></ul><a href="mailto:hello@rexpert.com?subject=Candidate%20introduction">Introduce yourself <span>↗</span></a></article>
       </div>
     </section>
 
     <section class="why">
-      <div class="why-title"><p class="section-no light">02 / THE REXPERT DIFFERENCE</p><p class="overline">Recruitment, interpreted through regulatory work</p><h2>The shortlist should make sense to your regulatory lead—not just HR.</h2></div>
+      <div class="why-title"><p class="section-no light">02 / THE REXPERT DIFFERENCE</p><figure><img src={asset('images/team-workshop.jpg')} width="1800" height="1050" alt="Specialists reviewing evidence during a collaborative workshop" loading="lazy"/></figure><p class="overline">Recruitment, interpreted through regulatory work</p><h2>The shortlist should make sense to your regulatory lead—not just HR.</h2></div>
       <div class="why-evidence">
         <article><span>01</span><h3>FDA-informed founder</h3><p>The search lens comes from consulting in the US drug regulatory environment, shaping better questions from the first briefing.</p></article>
         <article><span>02</span><h3>Mandate before market</h3><p>We identify the product, phase, submission and ownership required before approaching candidates.</p></article>
@@ -96,8 +98,8 @@ const schema = {'@context':'https://schema.org','@type':'EmploymentAgency',name:
     menu?.addEventListener('click',()=>{const isOpen=menu.getAttribute('aria-expanded')==='true';if(isOpen){close()}else{menu.setAttribute('aria-expanded','true');menu.setAttribute('aria-label','Close menu');nav?.classList.add('open');document.body.classList.add('menu-open')}});
     nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
     const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});document.querySelectorAll('section:not(.hero)').forEach(s=>{s.classList.add('reveal');observer.observe(s)});
-    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const progress=document.querySelector('[data-progress]');const dossier=document.querySelector('[data-dossier]');const heroCopy=document.querySelector('[data-hero-copy]');let ticking=false;
-    const renderScroll=()=>{const y=scrollY;const max=document.documentElement.scrollHeight-innerHeight;const ratio=max>0?y/max:0;if(progress instanceof HTMLElement)progress.style.transform=`scaleX(${ratio})`;if(!reduce&&innerWidth>760){const shift=Math.min(y,900);if(dossier instanceof HTMLElement)dossier.style.transform=`translate3d(0,${shift*.065}px,0) rotateX(${shift*.004}deg)`;if(heroCopy instanceof HTMLElement)heroCopy.style.transform=`translate3d(0,${shift*.025}px,0)`}ticking=false};
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const progress=document.querySelector('[data-progress]');const dossier=document.querySelector('[data-dossier]');const heroCopy=document.querySelector('[data-hero-copy]');const heroPhoto=document.querySelector('[data-hero-photo]');let ticking=false;
+    const renderScroll=()=>{const y=scrollY;const max=document.documentElement.scrollHeight-innerHeight;const ratio=max>0?y/max:0;if(progress instanceof HTMLElement)progress.style.transform=`scaleX(${ratio})`;if(!reduce&&innerWidth>760){const shift=Math.min(y,1300);if(dossier instanceof HTMLElement)dossier.style.transform=`translate3d(0,${shift*.065}px,0) rotateX(${shift*.004}deg)`;if(heroCopy instanceof HTMLElement)heroCopy.style.transform=`translate3d(0,${shift*.025}px,0)`;if(heroPhoto instanceof HTMLElement)heroPhoto.style.transform=`translate3d(0,${Math.max(0,y-500)*.035}px,0) scale(1.02)`}ticking=false};
     addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(renderScroll);ticking=true}},{passive:true});renderScroll();
   </script>
 </Layout>
