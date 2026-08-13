@@ -20,10 +20,10 @@ No competitor claims, metrics, logos, testimonials or copyrighted imagery were c
 
 **Regulatory search dossier.** Every search is presented as an evidence file: product, phase, ownership and agency-facing experience. The motif makes the founder's FDA-informed judgment visible instead of relying on a generic science photograph.
 
-- Palette: institutional navy, alert coral, evidence blue and candidate mint.
+- Palette: charcoal navy, mineral gray, desaturated sage and restrained terracotta.
 - Composition: split evidence hero, dual audience panels, indexed role ledger and sequential search method.
 - Typography: modern humanist sans with technical labels.
-- Motion: quiet dossier and section reveals, with a complete reduced-motion mode.
+- Motion: cinematic scroll progress, hero depth, dossier parallax, drifting technical grid and staggered section reveals, with a complete reduced-motion mode.
 - Stack: Astro static output with minimal native JavaScript and no hydrated framework runtime.
 
 ## Content additions

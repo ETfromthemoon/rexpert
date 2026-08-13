@@ -12,6 +12,7 @@ const schema = {'@context':'https://schema.org','@type':'EmploymentAgency',name:
 ---
 <Layout title="Rexpert — FDA-informed Regulatory Affairs recruiting" description="Permanent and contract Regulatory Affairs talent for US drug development, evaluated through an FDA-informed lens.">
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <div class="scroll-progress" aria-hidden="true"><i data-progress></i></div>
   <div class="signal-bar"><span>US DRUG DEVELOPMENT</span><span>PERMANENT + CONTRACT</span><span>FOUNDER-LED SEARCH</span></div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Rexpert home"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M5 5h15c9 0 14 4 14 12 0 5-3 9-8 11l10 10H24L14 27v11H5V5Zm9 8v8h6c3 0 5-1 5-4 0-3-2-4-5-4h-6Z"/></svg><span>rexpert<small>REGULATORY SEARCH</small></span></a>
@@ -23,13 +24,13 @@ const schema = {'@context':'https://schema.org','@type':'EmploymentAgency',name:
   <main id="top">
     <section class="hero">
       <div class="hero-grid">
-        <div class="hero-copy">
+        <div class="hero-copy" data-hero-copy>
           <p class="overline">Regulatory Affairs recruitment · United States</p>
           <h1>Recruit regulatory talent with the <em>right evidence.</em></h1>
           <p class="lede">Permanent and contract professionals for drug development—identified by a search partner who understands the work behind an FDA milestone.</p>
           <div class="hero-actions"><a class="button coral" href="#contact">Find regulatory talent <span>↗</span></a><a class="button ghost" href="#candidates">Explore your next move <span>→</span></a></div>
         </div>
-        <div class="dossier" aria-label="Candidate evidence dossier visualization">
+        <div class="dossier" data-dossier aria-label="Candidate evidence dossier visualization">
           <div class="dossier-top"><span>SEARCH DOSSIER</span><span>RX–001</span></div>
           <div class="stamp">FDA<br/><small>INFORMED</small></div>
           <div class="dossier-role"><small>MANDATE</small><strong>Director,<br/>Regulatory CMC</strong></div>
@@ -95,5 +96,8 @@ const schema = {'@context':'https://schema.org','@type':'EmploymentAgency',name:
     menu?.addEventListener('click',()=>{const isOpen=menu.getAttribute('aria-expanded')==='true';if(isOpen){close()}else{menu.setAttribute('aria-expanded','true');menu.setAttribute('aria-label','Close menu');nav?.classList.add('open');document.body.classList.add('menu-open')}});
     nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
     const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});document.querySelectorAll('section:not(.hero)').forEach(s=>{s.classList.add('reveal');observer.observe(s)});
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const progress=document.querySelector('[data-progress]');const dossier=document.querySelector('[data-dossier]');const heroCopy=document.querySelector('[data-hero-copy]');let ticking=false;
+    const renderScroll=()=>{const y=scrollY;const max=document.documentElement.scrollHeight-innerHeight;const ratio=max>0?y/max:0;if(progress instanceof HTMLElement)progress.style.transform=`scaleX(${ratio})`;if(!reduce&&innerWidth>760){const shift=Math.min(y,900);if(dossier instanceof HTMLElement)dossier.style.transform=`translate3d(0,${shift*.065}px,0) rotateX(${shift*.004}deg)`;if(heroCopy instanceof HTMLElement)heroCopy.style.transform=`translate3d(0,${shift*.025}px,0)`}ticking=false};
+    addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(renderScroll);ticking=true}},{passive:true});renderScroll();
   </script>
 </Layout>
