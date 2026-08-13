@@ -6,7 +6,8 @@ test('built homepage contains essential conversion and accessibility content', a
   const html = await readFile('dist/index.html', 'utf8');
   assert.match(html, /<h1/);
   assert.match(html, /aria-label="Primary navigation"/);
-  assert.match(html, /Book a talent briefing/);
+  assert.match(html, /Find regulatory talent/);
+  assert.match(html, /For candidates/);
   assert.match(html, /FDA/);
   assert.match(html, /application\/ld\+json/);
 });
