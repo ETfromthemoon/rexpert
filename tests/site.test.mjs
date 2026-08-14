@@ -9,6 +9,10 @@ test('built homepage contains essential conversion and accessibility content', a
   assert.match(html, /Find regulatory talent/);
   assert.match(html, /For candidates/);
   assert.match(html, /FDA/);
+  assert.match(html, /THE COMPETITIVE SET/);
+  assert.match(html, /Halloran Consulting Group/);
+  assert.match(html, /ELIQUENT Life Sciences/);
+  assert.match(html, /Hyman, Phelps &amp; McNamara/);
   assert.match(html, /application\/ld\+json/);
 });
 

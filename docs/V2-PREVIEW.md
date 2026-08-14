@@ -17,6 +17,12 @@ Create a more commercially complete version of Rexpert that serves employers and
 
 No competitor claims, metrics, logos, testimonials or copyrighted imagery were copied.
 
+## Competitive set added
+
+The landing now includes a market map that distinguishes regulatory consultancies from the adjacent FDA law-firm tier. The set covers Halloran Consulting Group, Biologics Consulting Group, ELIQUENT Life Sciences (the combined Validant / Greenleaf Health / DataRevive / Oriel Stat-a-Matrix / IDEC identity), Lachman Consultants, PharmaLex, Cato Research / Cato BioVentures, Voisin Consulting Life Sciences, and Hyman, Phelps & McNamara.
+
+The positioning takeaway is deliberate: consultancies sell advisory depth, regulatory operations and outsourced execution; Rexpert translates FDA-informed context into the specialist talent needed to carry the next decision. Company links in the UI point to the respective public sites.
+
 ## Selected visual thesis
 
 **Regulatory search dossier.** Every search is presented as an evidence file: product, phase, ownership and agency-facing experience. The motif makes the founder's FDA-informed judgment visible instead of relying on a generic science photograph.

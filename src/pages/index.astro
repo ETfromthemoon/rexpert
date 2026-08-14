@@ -8,6 +8,16 @@ const steps = [
   { no:'03', title:'Search the specialist market', body:'A focused outreach strategy reaches proven regulatory talent, including professionals not actively applying.' },
   { no:'04', title:'Present with context', body:'Every candidate arrives with a concise rationale: relevant evidence, likely strengths and points to explore.' }
 ];
+const competitors = [
+  { name:'Halloran Consulting Group', region:'US · Boston / San Diego', url:'https://hallorancg.com', signal:'Regulatory readiness, FDA meeting strategy and a deep biotech bench.' },
+  { name:'Biologics Consulting Group', region:'US · Alexandria, VA', url:'https://www.biologicsconsulting.com', signal:'Multidisciplinary support across biologics, pharma, devices, combination products and CGT.' },
+  { name:'ELIQUENT Life Sciences', region:'Global · Greenleaf successor', url:'https://eliquent.com', signal:'A combined regulatory brand bringing together Greenleaf Health, Validant, DataRevive, Oriel Stat-a-Matrix and IDEC.' },
+  { name:'Lachman Consultants', region:'US · FDA / generics specialist', url:'https://www.lachmanconsultants.com', signal:'Longstanding generic-drug, CMC and FDA compliance expertise.' },
+  { name:'PharmaLex', region:'Germany · Global', url:'https://www.pharmalex.com', signal:'Broad regulatory affairs, CMC and pharmacovigilance outsourcing across markets.' },
+  { name:'Cato Research / Cato BioVentures', region:'US · Boutique development', url:'https://www.allucent.com', signal:'Regulatory and clinical development strategy for smaller and mid-sized biotechs.' },
+  { name:'Voisin Consulting Life Sciences', region:'France · Global bridge', url:'https://voisinconsulting.com', signal:'Regulatory and market-access strategy connecting EU, US and other global pathways.' }
+];
+const adjacent = { name:'Hyman, Phelps & McNamara', region:'US · Washington, DC', url:'https://hpm.com', signal:'FDA regulatory law firm — adjacent to the consultancy set, but present in the same sponsor conversations.' };
 const schema = {'@context':'https://schema.org','@type':'EmploymentAgency',name:'Rexpert',url:'https://rexpert.com',description:'FDA-informed Regulatory Affairs recruiting for US drug development.',areaServed:'United States'};
 const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
 ---
@@ -17,7 +27,7 @@ const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
   <div class="signal-bar"><span>US DRUG DEVELOPMENT</span><span>PERMANENT + CONTRACT</span><span>FOUNDER-LED SEARCH</span></div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Rexpert home"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M5 5h15c9 0 14 4 14 12 0 5-3 9-8 11l10 10H24L14 27v11H5V5Zm9 8v8h6c3 0 5-1 5-4 0-3-2-4-5-4h-6Z"/></svg><span>rexpert<small>REGULATORY SEARCH</small></span></a>
-    <nav aria-label="Primary navigation" data-nav><a href="#employers">For employers</a><a href="#candidates">For candidates</a><a href="#expertise">Expertise</a><a href="#method">Method</a></nav>
+    <nav aria-label="Primary navigation" data-nav><a href="#employers">For employers</a><a href="#candidates">For candidates</a><a href="#expertise">Expertise</a><a href="#market">Market map</a><a href="#method">Method</a></nav>
     <a class="header-cta" href="#contact">Brief a search <span>↗</span></a>
     <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" data-menu><i></i><i></i></button>
   </header>
@@ -69,8 +79,19 @@ const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
       <div class="seniority"><span>ASSOCIATE</span><i></i><span>MANAGER</span><i></i><span>DIRECTOR</span><i></i><span>VP / HEAD OF</span></div>
     </section>
 
+    <section class="market-map" id="market">
+      <div class="market-map-head">
+        <div><p class="section-no light">04 / THE COMPETITIVE SET</p><p class="overline">What clients compare before they call</p><h2>Strategy consultancies own the advisory conversation. Rexpert owns the talent signal.</h2></div>
+        <p>These firms shape the regulatory brief, the pathway and the evidence sponsors need. The opportunity for Rexpert is distinct: translate that same FDA context into the people who can execute the next decision.</p>
+      </div>
+      <div class="competitor-grid">
+        {competitors.map((competitor, i)=><article class="competitor-card"><div class="competitor-card-top"><span>{String(i + 1).padStart(2,'0')}</span><span>{competitor.region}</span></div><h3>{competitor.name}</h3><p>{competitor.signal}</p><a href={competitor.url} target="_blank" rel="noreferrer">View company <span>↗</span></a></article>)}
+      </div>
+      <aside class="adjacent-card"><div><p class="section-no light">ADJACENT TIER</p><h3>{adjacent.name}</h3><p>{adjacent.region} · {adjacent.signal}</p></div><a href={adjacent.url} target="_blank" rel="noreferrer">View firm <span>↗</span></a></aside>
+    </section>
+
     <section class="method" id="method">
-      <div class="method-head"><p class="section-no light">04 / HOW SEARCH WORKS</p><p class="overline">A consultative process, made visible</p><h2>Less noise.<br/>More signal.</h2><p>Speed matters. Precision matters more. Our four-stage method keeps both in view.</p></div>
+      <div class="method-head"><p class="section-no light">05 / HOW SEARCH WORKS</p><p class="overline">A consultative process, made visible</p><h2>Less noise.<br/>More signal.</h2><p>Speed matters. Precision matters more. Our four-stage method keeps both in view.</p></div>
       <div class="method-steps">{steps.map(step=><article><span>{step.no}</span><div><h3>{step.title}</h3><p>{step.body}</p></div></article>)}</div>
     </section>
 
@@ -81,7 +102,7 @@ const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
     </section>
 
     <section class="contact" id="contact">
-      <div><p class="section-no">05 / START A CONVERSATION</p><p class="overline">A better search starts with a sharper brief</p><h2>Tell us what needs to move forward.</h2><p>Share the role, regulatory milestone or capability gap. We’ll help define the mandate and the market.</p></div>
+      <div><p class="section-no">06 / START A CONVERSATION</p><p class="overline">A better search starts with a sharper brief</p><h2>Tell us what needs to move forward.</h2><p>Share the role, regulatory milestone or capability gap. We’ll help define the mandate and the market.</p></div>
       <form action="mailto:hello@rexpert.com" method="post" enctype="text/plain">
         <label>Your name<input name="name" autocomplete="name" required placeholder="Jane Smith"/></label>
         <label>Work email<input name="email" type="email" autocomplete="email" required placeholder="jane@company.com"/></label>
@@ -91,7 +112,7 @@ const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
       </form>
     </section>
   </main>
-  <footer><a class="brand footer-brand" href="#top"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M5 5h15c9 0 14 4 14 12 0 5-3 9-8 11l10 10H24L14 27v11H5V5Zm9 8v8h6c3 0 5-1 5-4 0-3-2-4-5-4h-6Z"/></svg><span>rexpert<small>REGULATORY SEARCH</small></span></a><p>FDA-informed Regulatory Affairs recruiting for US drug development.</p><div><a href="#employers">Employers</a><a href="#candidates">Candidates</a><a href="#expertise">Expertise</a><a href="#contact">Contact</a></div><small>© {new Date().getFullYear()} Rexpert. Demonstration concept.</small></footer>
+  <footer><a class="brand footer-brand" href="#top"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M5 5h15c9 0 14 4 14 12 0 5-3 9-8 11l10 10H24L14 27v11H5V5Zm9 8v8h6c3 0 5-1 5-4 0-3-2-4-5-4h-6Z"/></svg><span>rexpert<small>REGULATORY SEARCH</small></span></a><p>FDA-informed Regulatory Affairs recruiting for US drug development.</p><div><a href="#employers">Employers</a><a href="#candidates">Candidates</a><a href="#expertise">Expertise</a><a href="#market">Market map</a><a href="#contact">Contact</a></div><small>© {new Date().getFullYear()} Rexpert. Demonstration concept.</small></footer>
   <script>
     const menu=document.querySelector('[data-menu]');const nav=document.querySelector('[data-nav]');
     const close=()=>{menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','Open menu');nav?.classList.remove('open');document.body.classList.remove('menu-open')};
