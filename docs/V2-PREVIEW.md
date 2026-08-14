@@ -1,6 +1,7 @@
 # Rexpert V2 — Preview brief
 
-**Live preview:** https://rexpert-v2-preview.vercel.app
+**Production:** https://rexpert.vercel.app
+**V2 preview:** https://rexpert-v2-preview.vercel.app
 
 ## Preview objective
 
