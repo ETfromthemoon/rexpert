@@ -18,6 +18,14 @@ const competitors = [
   { name:'Voisin Consulting Life Sciences', region:'France · Global bridge', url:'https://voisinconsulting.com', signal:'Regulatory and market-access strategy connecting EU, US and other global pathways.' }
 ];
 const adjacent = { name:'Hyman, Phelps & McNamara', region:'US · Washington, DC', url:'https://hpm.com', signal:'FDA regulatory law firm — adjacent to the consultancy set, but present in the same sponsor conversations.' };
+const intelTools = [
+  { no:'01', title:'Discussion groups + blogs', lens:'Live practitioner discourse', tools:[['Fierce Biotech','https://www.fiercebiotech.com'],['Fierce Pharma','https://www.fiercepharma.com'],['Drug & Device Law','https://www.druganddevicelawblog.com'],['CafePharma','https://www.cafepharma.com'],['Eye on FDA','https://www.eyeonfda.com'],['FDA Law Blog','https://www.fdalawblog.net']] },
+  { no:'02', title:'Professional associations', lens:'Credentialed community signal', tools:[['AAPS','https://www.aaps.org'],['ACRP','https://acrpnet.org'],['DIA','https://www.diaglobal.org'],['RAPS','https://www.raps.org'],['TOPRA','https://www.topra.org'],['CAPRA','https://www.capra.ca']] },
+  { no:'03', title:'Publication providers', lens:'Structured regulatory coverage', tools:[['Elsevier Business Intelligence','https://www.elsevier.com'],['FDA News','https://www.fdanews.com'],['Informa Healthcare','https://www.pjbpubs.com'],['SCRIP World Pharmaceutical News','https://www.pjbpubs.com']] },
+  { no:'04', title:'Alerts + newsletters', lens:'Changes worth acting on', tools:[['Regulatory Focus','https://www.raps.org/news-and-articles'],['FDA subscriptions','https://www.fda.gov/about-fda/contact-fda/subscribe'],['Inside Health Policy','https://www.insidehealthpolicy.com'],['Nature','https://www.nature.com'],['Applied Clinical Trials','https://www.appliedclinicaltrialsonline.com'],['BioWorld Today','https://www.bioworld.com']] },
+  { no:'05', title:'Business intelligence', lens:'Company and pipeline context', tools:[['BioSpace','https://www.biospace.com'],['CenterWatch','https://www.centerwatch.com'],['PharmaLicensing','https://www.pharmalicensing.com'],['DataMonitor','https://www.datamonitor.com'],['Pipeline Review','https://www.pipelinereview.com']] },
+  { no:'06', title:'Paid intelligence databases', lens:'Deep competitive evidence', tools:[['Adis R&D Insight','https://www.wolterskluwer.com'],['BioPharm Insight','https://www.biopharminsight.com'],['MedTRACK','https://www.medtrack.com'],['Pharmaprojects','https://www.pharmaprojects.com'],['Thomson Pharma Partnering','https://www.thomsonreuters.com']] }
+];
 const schema = {'@context':'https://schema.org','@type':'EmploymentAgency',name:'Rexpert',url:'https://rexpert.com',description:'FDA-informed Regulatory Affairs recruiting for US drug development.',areaServed:'United States'};
 const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
 ---
@@ -27,7 +35,7 @@ const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
   <div class="signal-bar"><span>US DRUG DEVELOPMENT</span><span>PERMANENT + CONTRACT</span><span>FOUNDER-LED SEARCH</span></div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Rexpert home"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M5 5h15c9 0 14 4 14 12 0 5-3 9-8 11l10 10H24L14 27v11H5V5Zm9 8v8h6c3 0 5-1 5-4 0-3-2-4-5-4h-6Z"/></svg><span>rexpert<small>REGULATORY SEARCH</small></span></a>
-    <nav aria-label="Primary navigation" data-nav><a href="#employers">For employers</a><a href="#candidates">For candidates</a><a href="#expertise">Expertise</a><a href="#market">Market map</a><a href="#method">Method</a></nav>
+    <nav aria-label="Primary navigation" data-nav><a href="#employers">For employers</a><a href="#candidates">For candidates</a><a href="#expertise">Expertise</a><a href="#market">Market map</a><a href="#intelligence">Intelligence</a><a href="#method">Method</a></nav>
     <a class="header-cta" href="#contact">Brief a search <span>↗</span></a>
     <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" data-menu><i></i><i></i></button>
   </header>
@@ -90,8 +98,19 @@ const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
       <aside class="adjacent-card"><div><p class="section-no light">ADJACENT TIER</p><h3>{adjacent.name}</h3><p>{adjacent.region} · {adjacent.signal}</p></div><a href={adjacent.url} target="_blank" rel="noreferrer">View firm <span>↗</span></a></aside>
     </section>
 
+    <section class="intelligence" id="intelligence">
+      <div class="intelligence-head">
+        <div><p class="section-no">05 / REGULATORY INTELLIGENCE</p><p class="overline">The signal stack behind a sharper search</p><h2>Better questions start before the brief.</h2></div>
+        <p>The supplied reference maps the places regulatory leaders track: practitioner conversation, professional communities, publication feeds, business intelligence and paid databases. Rexpert turns those signals into better talent conversations.</p>
+      </div>
+      <div class="intel-grid">
+        {intelTools.map((tool)=><details class="intel-card"><summary><span>{tool.no}</span><strong>{tool.title}</strong><i>＋</i></summary><p>{tool.lens}</p><div class="intel-links">{tool.tools.map(([name,url])=><a href={url} target="_blank" rel="noreferrer">{name}<span>↗</span></a>)}</div></details>)}
+      </div>
+      <div class="intelligence-note"><span>REXPERT PRINCIPLE</span><p>Tools are not the deliverable. The advantage is knowing which signal changes the hiring mandate—and which one is just noise.</p><a class="button coral" href="#contact">Build an intelligence brief <span>↗</span></a></div>
+    </section>
+
     <section class="method" id="method">
-      <div class="method-head"><p class="section-no light">05 / HOW SEARCH WORKS</p><p class="overline">A consultative process, made visible</p><h2>Less noise.<br/>More signal.</h2><p>Speed matters. Precision matters more. Our four-stage method keeps both in view.</p></div>
+      <div class="method-head"><p class="section-no light">06 / HOW SEARCH WORKS</p><p class="overline">A consultative process, made visible</p><h2>Less noise.<br/>More signal.</h2><p>Speed matters. Precision matters more. Our four-stage method keeps both in view.</p></div>
       <div class="method-steps">{steps.map(step=><article><span>{step.no}</span><div><h3>{step.title}</h3><p>{step.body}</p></div></article>)}</div>
     </section>
 
@@ -102,7 +121,7 @@ const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
     </section>
 
     <section class="contact" id="contact">
-      <div><p class="section-no">06 / START A CONVERSATION</p><p class="overline">A better search starts with a sharper brief</p><h2>Tell us what needs to move forward.</h2><p>Share the role, regulatory milestone or capability gap. We’ll help define the mandate and the market.</p></div>
+      <div><p class="section-no">07 / START A CONVERSATION</p><p class="overline">A better search starts with a sharper brief</p><h2>Tell us what needs to move forward.</h2><p>Share the role, regulatory milestone or capability gap. We’ll help define the mandate and the market.</p></div>
       <form action="mailto:hello@rexpert.com" method="post" enctype="text/plain">
         <label>Your name<input name="name" autocomplete="name" required placeholder="Jane Smith"/></label>
         <label>Work email<input name="email" type="email" autocomplete="email" required placeholder="jane@company.com"/></label>

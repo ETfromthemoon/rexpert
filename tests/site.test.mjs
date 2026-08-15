@@ -13,6 +13,9 @@ test('built homepage contains essential conversion and accessibility content', a
   assert.match(html, /Halloran Consulting Group/);
   assert.match(html, /ELIQUENT Life Sciences/);
   assert.match(html, /Hyman, Phelps &amp; McNamara/);
+  assert.match(html, /REGULATORY INTELLIGENCE/);
+  assert.match(html, /Paid intelligence databases/);
+  assert.match(html, /Rexpert Principle|REXPERT PRINCIPLE/);
   assert.match(html, /application\/ld\+json/);
 });
 
