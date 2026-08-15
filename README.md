@@ -2,6 +2,10 @@
 
 An original, static Astro concept for a US Regulatory Affairs recruiting firm focused on contract and permanent drug-development talent.
 
+The `agent/regulatory-recruiting-v2` branch contains the evidence-dossier V2 concept. See [docs/V2-PREVIEW.md](docs/V2-PREVIEW.md) for the reference synthesis and preview rationale.
+
+**Live Vercel:** [rexpert.vercel.app](https://rexpert.vercel.app) · **V2 preview:** [rexpert-v2-preview.vercel.app](https://rexpert-v2-preview.vercel.app)
+
 ## Positioning
 
 **Regulatory talent, seen through an FDA lens.** The market largely competes on network size, coverage breadth, or general life-sciences specialization. Rexpert is positioned around founder-led regulatory judgment: searches begin with the program milestone and regulatory risk, then identify the talent capable of moving it forward.
