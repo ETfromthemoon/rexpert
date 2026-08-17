@@ -1,15 +1,14 @@
-# Rexpert V2 — Preview brief
+# REGSPERTS V2 — Preview brief
 
-**Production:** https://rexpert.vercel.app
-**V2 preview:** https://rexpert-v2-preview.vercel.app
+**Production:** https://regsperts.vercel.app
 
 ## Preview objective
 
-Create a more commercially complete version of Rexpert that serves employers and candidates while strengthening the core distinction: Regulatory Affairs search evaluated through an FDA-informed lens.
+Create a more commercially complete version of REGSPERTS that serves employers and candidates while strengthening the core distinction: Regulatory Affairs search evaluated through an FDA-informed lens.
 
 ## Reference synthesis
 
-| Reference | Useful signal | Rexpert V2 response |
+| Reference | Useful signal | REGSPERTS V2 response |
 |---|---|---|
 | [Meet Life Sciences](https://www.meetlifesciences.com/regulatory-affairs-recruitment/) | Dual candidate/employer audience, broad solution choice and energetic digital identity | Two explicit audience paths and warmer, higher-energy color fields without adopting Meet's visual language |
 | [EPM Scientific](https://www.epmscientific.com/en-us/request-talent/regulatory-affairs-recruitment) | Consultative partnership, concrete reasons to choose, role inventory and permanent/contract/multi-hire coverage | Evidence-led difference section, visible search method, indexed roles and multiple engagement types |
@@ -39,7 +38,7 @@ No competitor claims, metrics, logos, testimonials or copyrighted imagery were c
 
 ## Provisional content
 
-The founder's name, detailed biography, case studies, metrics, client evidence and live CRM/form endpoint remain unavailable. The page intentionally makes no unsupported claims. `hello@rexpert.com` remains provisional.
+The founder's name, detailed biography, case studies, metrics, client evidence and live CRM/form endpoint remain unavailable. The page intentionally makes no unsupported claims. `hello@regsperts.com` remains provisional.
 
 ## Validation checklist
 
