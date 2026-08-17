@@ -1,14 +1,14 @@
-# Rexpert — demonstration landing page
+# REGSPERTS — demonstration landing page
 
 An original, static Astro concept for a US Regulatory Affairs recruiting firm focused on contract and permanent drug-development talent.
 
 The `agent/regulatory-recruiting-v2` branch contains the evidence-dossier V2 concept. See [docs/V2-PREVIEW.md](docs/V2-PREVIEW.md) for the reference synthesis and preview rationale.
 
-**Live Vercel:** [rexpert.vercel.app](https://rexpert.vercel.app) · **V2 preview:** [rexpert-v2-preview.vercel.app](https://rexpert-v2-preview.vercel.app)
+**Live Vercel:** [regsperts.vercel.app](https://regsperts.vercel.app)
 
 ## Positioning
 
-**Regulatory talent, seen through an FDA lens.** The market largely competes on network size, coverage breadth, or general life-sciences specialization. Rexpert is positioned around founder-led regulatory judgment: searches begin with the program milestone and regulatory risk, then identify the talent capable of moving it forward.
+**Regulatory talent, seen through an FDA lens.** The market largely competes on network size, coverage breadth, or general life-sciences specialization. REGSPERTS is positioned around founder-led regulatory judgment: searches begin with the program milestone and regulatory risk, then identify the talent capable of moving it forward.
 
 ### Competitive signals reviewed
 
@@ -18,7 +18,7 @@ The `agent/regulatory-recruiting-v2` branch contains the evidence-dossier V2 con
 - [EPM Scientific](https://www.epmscientific.com/en-fr/request-talent/contract-recruitment-solutions) — broad life-sciences contract recruitment and market intelligence.
 - [ArchLight Resources](https://archlightresources.com/regulatory-affairs-recruiters) — regulatory placements across the full career ladder and multiple regulated product categories.
 
-This demo intentionally avoids unsupported claims, invented metrics, client logos, testimonials, and founder biography details. `hello@rexpert.com` and the domain are provisional pending client confirmation.
+This demo intentionally avoids unsupported claims, invented metrics, client logos, testimonials, and founder biography details. `hello@regsperts.com` and the domain are provisional pending client confirmation.
 
 ## Design decision ledger
 

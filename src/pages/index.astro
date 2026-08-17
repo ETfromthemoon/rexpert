@@ -8,15 +8,15 @@ const steps = [
   { no:'03', title:'Search the specialist market', body:'A focused outreach strategy reaches proven regulatory talent, including professionals not actively applying.' },
   { no:'04', title:'Present with context', body:'Every candidate arrives with a concise rationale: relevant evidence, likely strengths and points to explore.' }
 ];
-const schema = {'@context':'https://schema.org','@type':'EmploymentAgency',name:'Rexpert',url:'https://rexpert.com',description:'FDA-informed Regulatory Affairs recruiting for US drug development.',areaServed:'United States'};
+const schema = {'@context':'https://schema.org','@type':'EmploymentAgency',name:'REGSPERTS',url:'https://regsperts.vercel.app',description:'FDA-informed Regulatory Affairs recruiting for US drug development.',areaServed:'United States'};
 const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
 ---
-<Layout title="Rexpert — FDA-informed Regulatory Affairs recruiting" description="Permanent and contract Regulatory Affairs talent for US drug development, evaluated through an FDA-informed lens.">
+<Layout title="REGSPERTS — FDA-informed Regulatory Affairs recruiting" description="Permanent and contract Regulatory Affairs talent for US drug development, evaluated through an FDA-informed lens.">
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
   <div class="scroll-progress" aria-hidden="true"><i data-progress></i></div>
   <div class="signal-bar"><span>US DRUG DEVELOPMENT</span><span>PERMANENT + CONTRACT</span><span>FOUNDER-LED SEARCH</span></div>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Rexpert home"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M5 5h15c9 0 14 4 14 12 0 5-3 9-8 11l10 10H24L14 27v11H5V5Zm9 8v8h6c3 0 5-1 5-4 0-3-2-4-5-4h-6Z"/></svg><span>rexpert<small>REGULATORY SEARCH</small></span></a>
+    <a class="brand" href="#top" aria-label="REGSPERTS home"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M5 5h15c9 0 14 4 14 12 0 5-3 9-8 11l10 10H24L14 27v11H5V5Zm9 8v8h6c3 0 5-1 5-4 0-3-2-4-5-4h-6Z"/></svg><span>REGSPERTS<small>REGULATORY SEARCH</small></span></a>
     <nav aria-label="Primary navigation" data-nav><a href="#employers">For employers</a><a href="#candidates">For candidates</a><a href="#expertise">Expertise</a><a href="#method">Method</a></nav>
     <a class="header-cta" href="#contact">Brief a search <span>↗</span></a>
     <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" data-menu><i></i><i></i></button>
@@ -49,12 +49,12 @@ const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
       <div class="choice-intro"><p class="overline">One specialist market. Two perspectives.</p><h2>Built for the people hiring—and the people doing the work.</h2></div>
       <div class="choice-panels">
         <article class="employer-panel"><figure><img src={asset('images/leadership-meeting.jpg')} width="1600" height="900" alt="Business leaders reviewing a hiring mandate together" loading="lazy"/></figure><span class="panel-label">FOR EMPLOYERS</span><h3>Your program cannot afford a surface-level match.</h3><p>We translate a business need into a precise regulatory mandate, then search for professionals whose experience stands up to the work ahead.</p><ul><li>Permanent and retained search</li><li>Contract and interim talent</li><li>Single or multi-hire programs</li><li>Specialist through executive</li></ul><a href="#contact">Discuss a hiring need <span>↗</span></a></article>
-        <article class="candidate-panel" id="candidates"><figure><img src={asset('images/candidate-team.jpg')} width="1800" height="1050" alt="A diverse professional team collaborating in a modern workplace" loading="lazy"/></figure><span class="panel-label">FOR CANDIDATES</span><h3>Your experience deserves a more informed conversation.</h3><p>We look beyond your latest title to understand the products, submissions, decisions and agency interactions that define your value.</p><ul><li>Confidential career conversations</li><li>Permanent and contract opportunities</li><li>Role context before introduction</li><li>Direct, specialist feedback</li></ul><a href="mailto:hello@rexpert.com?subject=Candidate%20introduction">Introduce yourself <span>↗</span></a></article>
+        <article class="candidate-panel" id="candidates"><figure><img src={asset('images/candidate-team.jpg')} width="1800" height="1050" alt="A diverse professional team collaborating in a modern workplace" loading="lazy"/></figure><span class="panel-label">FOR CANDIDATES</span><h3>Your experience deserves a more informed conversation.</h3><p>We look beyond your latest title to understand the products, submissions, decisions and agency interactions that define your value.</p><ul><li>Confidential career conversations</li><li>Permanent and contract opportunities</li><li>Role context before introduction</li><li>Direct, specialist feedback</li></ul><a href="mailto:hello@regsperts.com?subject=Candidate%20introduction">Introduce yourself <span>↗</span></a></article>
       </div>
     </section>
 
     <section class="why">
-      <div class="why-title"><p class="section-no light">02 / THE REXPERT DIFFERENCE</p><figure><img src={asset('images/team-workshop.jpg')} width="1800" height="1050" alt="Specialists reviewing evidence during a collaborative workshop" loading="lazy"/></figure><p class="overline">Recruitment, interpreted through regulatory work</p><h2>The shortlist should make sense to your regulatory lead—not just HR.</h2></div>
+      <div class="why-title"><p class="section-no light">02 / THE REGSPERTS DIFFERENCE</p><figure><img src={asset('images/team-workshop.jpg')} width="1800" height="1050" alt="Specialists reviewing evidence during a collaborative workshop" loading="lazy"/></figure><p class="overline">Recruitment, interpreted through regulatory work</p><h2>The shortlist should make sense to your regulatory lead—not just HR.</h2></div>
       <div class="why-evidence">
         <article><span>01</span><h3>FDA-informed founder</h3><p>The search lens comes from consulting in the US drug regulatory environment, shaping better questions from the first briefing.</p></article>
         <article><span>02</span><h3>Mandate before market</h3><p>We identify the product, phase, submission and ownership required before approaching candidates.</p></article>
@@ -77,12 +77,12 @@ const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
     <section class="statement">
       <div class="statement-mark"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M5 5h15c9 0 14 4 14 12 0 5-3 9-8 11l10 10H24L14 27v11H5V5Zm9 8v8h6c3 0 5-1 5-4 0-3-2-4-5-4h-6Z"/></svg></div>
       <blockquote>“The strongest regulatory hire is not the résumé with the most keywords. It is the person whose evidence matches the next decision.”</blockquote>
-      <p>THE REXPERT SEARCH PRINCIPLE</p>
+      <p>THE REGSPERTS SEARCH PRINCIPLE</p>
     </section>
 
     <section class="contact" id="contact">
       <div><p class="section-no">05 / START A CONVERSATION</p><p class="overline">A better search starts with a sharper brief</p><h2>Tell us what needs to move forward.</h2><p>Share the role, regulatory milestone or capability gap. We’ll help define the mandate and the market.</p></div>
-      <form action="mailto:hello@rexpert.com" method="post" enctype="text/plain">
+      <form action="mailto:hello@regsperts.com" method="post" enctype="text/plain">
         <label>Your name<input name="name" autocomplete="name" required placeholder="Jane Smith"/></label>
         <label>Work email<input name="email" type="email" autocomplete="email" required placeholder="jane@company.com"/></label>
         <label>What do you need?<select name="need" required><option value="">Select one</option><option>Permanent hire</option><option>Contract talent</option><option>Confidential career conversation</option><option>Not sure yet</option></select></label>
@@ -91,7 +91,7 @@ const asset = (path:string) => `${import.meta.env.BASE_URL}${path}`;
       </form>
     </section>
   </main>
-  <footer><a class="brand footer-brand" href="#top"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M5 5h15c9 0 14 4 14 12 0 5-3 9-8 11l10 10H24L14 27v11H5V5Zm9 8v8h6c3 0 5-1 5-4 0-3-2-4-5-4h-6Z"/></svg><span>rexpert<small>REGULATORY SEARCH</small></span></a><p>FDA-informed Regulatory Affairs recruiting for US drug development.</p><div><a href="#employers">Employers</a><a href="#candidates">Candidates</a><a href="#expertise">Expertise</a><a href="#contact">Contact</a></div><small>© {new Date().getFullYear()} Rexpert. Demonstration concept.</small></footer>
+  <footer><a class="brand footer-brand" href="#top"><svg viewBox="0 0 42 42" aria-hidden="true"><path d="M5 5h15c9 0 14 4 14 12 0 5-3 9-8 11l10 10H24L14 27v11H5V5Zm9 8v8h6c3 0 5-1 5-4 0-3-2-4-5-4h-6Z"/></svg><span>REGSPERTS<small>REGULATORY SEARCH</small></span></a><p>FDA-informed Regulatory Affairs recruiting for US drug development.</p><div><a href="#employers">Employers</a><a href="#candidates">Candidates</a><a href="#expertise">Expertise</a><a href="#contact">Contact</a></div><small>© {new Date().getFullYear()} REGSPERTS. Demonstration concept.</small></footer>
   <script>
     const menu=document.querySelector('[data-menu]');const nav=document.querySelector('[data-nav]');
     const close=()=>{menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','Open menu');nav?.classList.remove('open');document.body.classList.remove('menu-open')};
